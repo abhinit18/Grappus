@@ -1,0 +1,267 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div id="wrapper">
+
+</div>
+
+<div class="animateme">
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+
+
+
+<div class="homepage-hero-module">
+    <div class="video-container">
+        <div class="title-container">
+            <div class="headline">
+                <!--<h1>Welcome to our Company</h1>-->
+
+            </div>
+            <div class="description">
+                <div class="inner"></div>
+            </div>
+        </div>
+        <div class="filter"></div>
+        <video autoplay loop muted class="fillWidth">
+            <source src="assets/images/Tomorrowland.mp4" type="video/mp4"/>
+            Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden">
+            <img src="http://www.videojs.com/img/poster.jpg" alt="">
+        </div>
+    </div>
+</div>
+<div class="container" id="content">
+    <!-- Example row of columns -->
+    <div class="row">
+
+        <div class="full-width text-center">
+            <h1>
+                <span class="bd-bottm">Featured Venues</span>
+            </h1>
+            <br>
+            <h4>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+            </h4>
+            <br>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-4z" ng-repeat="data in tableData">
+            <div ng-if="data.venue.image != null" class="thumbnail full-thumb" ng-style="{'background-image':'url({{data.venue.image}})'}">
+                <div class="full-width bg-trans">
+                <h4 style="color:#fff;">{{data.venue.display_name}}</h4>
+                <div class="full-width md-top">
+                    <ul class="list-inline text-center">
+                        <li class="bx bx1"><h4>people</h4><h4>{{data.count_total}}</h4></li>
+                        <li class="bx bx2"><h4>Males</h4><h4>{{data.count_total - data.count_females}}</h4></li>
+                        <li class="bx bx3"><h4>Females</h4><h4>{{data.count_females}}</h4></li>
+                        <li class="bx bx4"><h4>Fullness</h4><h4>{{data.fullness}}</h4></li>
+                    </ul>
+
+                </div>
+                <div class="caption">
+                    <h4>{{data.venue.display_name}}</h4>
+                    <ul class="list-inline text-center">
+                        <li class="bxd">
+                            <h4>Vibe</h4>
+                            <h4 ng-if="data.vibe == 0">Chill</h4>
+                            <h4 ng-if="data.vibe == 1">Upbeat</h4>
+                            <h4 ng-if="data.vibe == 2">Dancing</h4>
+                        </li>
+                        <li class="bxd">
+                            <h4>Music Type</h4>
+                            <h4 ng-if="data.music_type == 0">Bollywood</h4>
+                            <h4 ng-if="data.music_type == 1">EDM</h4>
+                            <h4 ng-if="data.music_type == 2">Rock</h4>
+                            <h4 ng-if="data.music_type == 3">Pop</h4>
+                            <h4 ng-if="data.music_type == 4">Commercial</h4>
+                        </li>
+                        <li class="bxd">
+                            <h4>Music Source</h4>
+                            <h4 ng-if="data.music_source == 0">Speakers</h4>
+                            <h4 ng-if="data.music_source == 1">In House DJ</h4>
+                            <h4 ng-if="data.music_source == 2">Special DJ</h4>
+                            <h4 ng-if="data.music_source == 3">Karaoke</h4>
+                            <h4 ng-if="data.music_source == 4">Live Band</h4>
+                        </li>
+                    </ul>
+                    <p>
+                        <a href="javascript:void(0);" class="btn btn-primary btn-sm" ng-click="ViewDetails(data)">View
+                            Details</a>
+                    </p>
+                </div>
+                </div>
+                <!--<img ng-src="{{data.venue.image}}" alt="...">-->
+            </div>
+            <div ng-if="data.venue.image == null" class="thumbnail full-thumb noImg" ng-style="{'background-image':'url(assets/images/No_image.png)'}">
+                <div class="full-width bg-trans">
+                <h4 style="color:#fff;">{{data.venue.display_name}}</h4>
+                <div class="full-width md-top">
+                    <ul class="list-inline text-center">
+                        <li class="bx bx1"><h4>people</h4><h4>{{data.count_total}}</h4></li>
+                        <li class="bx bx2"><h4>Males</h4><h4>{{data.count_total - data.count_females}}</h4></li>
+                        <li class="bx bx3"><h4>Females</h4><h4>{{data.count_females}}</h4></li>
+                        <li class="bx bx4"><h4>Fullness</h4><h4>{{data.fullness}}</h4></li>
+                    </ul>
+
+                </div>
+                <div class="caption">
+                    <h4>{{data.venue.display_name}}</h4>
+                    <ul class="list-inline text-center">
+                        <li class="bxd">
+                            <h4>Vibe</h4>
+                            <h4 ng-if="data.vibe == 0">Chill</h4>
+                            <h4 ng-if="data.vibe == 1">Upbeat</h4>
+                            <h4 ng-if="data.vibe == 2">Dancing</h4>
+                        </li>
+                        <li class="bxd">
+                            <h4>Music Type</h4>
+                            <h4 ng-if="data.music_type == 0">Bollywood</h4>
+                            <h4 ng-if="data.music_type == 1">EDM</h4>
+                            <h4 ng-if="data.music_type == 2">Rock</h4>
+                            <h4 ng-if="data.music_type == 3">Pop</h4>
+                            <h4 ng-if="data.music_type == 4">Commercial</h4>
+                        </li>
+                        <li class="bxd">
+                            <h4>Music Source</h4>
+                            <h4 ng-if="data.music_source == 0">Speakers</h4>
+                            <h4 ng-if="data.music_source == 1">In House DJ</h4>
+                            <h4 ng-if="data.music_source == 2">Special DJ</h4>
+                            <h4 ng-if="data.music_source == 3">Karaoke</h4>
+                            <h4 ng-if="data.music_source == 4">Live Band</h4>
+                        </li>
+                    </ul>
+                    <p>
+                        <a href="javascript:void(0);" class="btn btn-primary btn-sm" ng-click="ViewDetails(details)">View
+                            Details</a>
+                    </p>
+                </div>
+                </div>
+                <!--<img ng-src="{{data.venue.image}}" alt="...">-->
+            </div>
+        </div>
+
+
+    </div>
+
+    <hr>
+    <footer>
+        <p>&copy; Company 2014</p>
+    </footer>
+</div>
+<!-- /container -->
+
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script>
+    /** Document Ready Functions **/
+    /********************************************************************/
+
+    $(document).ready(function () {
+
+        // Resive video
+        scaleVideoContainer();
+
+        initBannerVideoSize('.video-container .poster img');
+        initBannerVideoSize('.video-container .filter');
+        initBannerVideoSize('.video-container video');
+
+        $(window).on('resize', function () {
+            scaleVideoContainer();
+            scaleBannerVideoSize('.video-container .poster img');
+            scaleBannerVideoSize('.video-container .filter');
+            scaleBannerVideoSize('.video-container video');
+        });
+
+    });
+
+    /** Reusable Functions **/
+    /********************************************************************/
+
+    function scaleVideoContainer() {
+
+        var height = $(window).height();
+        var unitHeight = parseInt(height) + 'px';
+        $('.homepage-hero-module').css('height', unitHeight);
+
+    }
+
+    function initBannerVideoSize(element) {
+
+        $(element).each(function () {
+            $(this).data('height', $(this).height());
+            $(this).data('width', $(this).width());
+        });
+
+        scaleBannerVideoSize(element);
+
+    }
+
+    function scaleBannerVideoSize(element) {
+
+        var windowWidth = $(window).width(),
+                windowHeight = $(window).height(),
+                videoWidth,
+                videoHeight;
+
+        console.log(windowHeight);
+
+        $(element).each(function () {
+            var videoAspectRatio = $(this).data('height') / $(this).data('width'),
+                    windowAspectRatio = windowHeight / windowWidth;
+
+            if (videoAspectRatio > windowAspectRatio) {
+                videoWidth = windowWidth;
+                videoHeight = videoWidth * videoAspectRatio;
+                $(this).css({'top': -(videoHeight - windowHeight) / 2 + 'px', 'margin-left': 0});
+            } else {
+                videoHeight = windowHeight;
+                videoWidth = videoHeight / videoAspectRatio;
+                $(this).css({'margin-top': 0, 'margin-left': -(videoWidth - windowWidth) / 2 + 'px'});
+            }
+
+            $(this).width(videoWidth).height(videoHeight);
+
+            $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+
+        });
+    }
+</script>
