@@ -53,12 +53,12 @@
             <br>
         </div>
 
-        <div class="col-xs-6 col-sm-4 col-md-4z " ng-repeat="data in dataTable">
+        <div class="col-xs-12 col-sm-4 col-md-4z " ng-repeat="data in dataTable">
 
-            <div  class="thumbnail full-thumb "
-                 ng-style="{'background-image':'url({{productImg }})'}">
+            <div class="thumbnail full-thumb "
+                 ng-style="{'background-image':'url({{data.productImg }})'}">
                 <div class="full-width bg-trans">
-                    <h4 style="color:#fff;">{{data}}</h4>
+                    <h4 style="color:#fff;">{{data.venue}}</h4>
 
                     <div class="full-width md-top">
                         <ul class="list-inline text-center">
@@ -103,55 +103,7 @@
                 </div>
                 <!--<img ng-src="{{data.venue.image}}" alt="...">-->
             </div>
-            <!--<div ng-if="data.venue.image == null" class="thumbnail full-thumb noImg"-->
-                 <!--ng-style="{'background-image':'url(assets/images/No_image.png)'}">-->
-                <!--<div class="full-width bg-trans">-->
-                    <!--<h4 style="color:#fff;">{{data.venue.display_name}}</h4>-->
 
-                    <!--<div class="full-width md-top">-->
-                        <!--<ul class="list-inline text-center">-->
-                            <!--<li class="bx bx1"><h4>people</h4><h4>{{data.count_total}}</h4></li>-->
-                            <!--<li class="bx bx2"><h4>Males</h4><h4>{{data.count_total - data.count_females}}</h4></li>-->
-                            <!--<li class="bx bx3"><h4>Females</h4><h4>{{data.count_females}}</h4></li>-->
-                            <!--<li class="bx bx4"><h4>Fullness</h4><h4>{{data.fullness}}</h4></li>-->
-                        <!--</ul>-->
-
-                    <!--</div>-->
-                    <!--<div class="caption">-->
-                        <!--<h4>{{data.venue.display_name}}</h4>-->
-                        <!--<ul class="list-inline text-center">-->
-                            <!--<li class="bxd">-->
-                                <!--<h4>Vibe</h4>-->
-                                <!--<h4 ng-if="data.vibe == 0">Chill</h4>-->
-                                <!--<h4 ng-if="data.vibe == 1">Upbeat</h4>-->
-                                <!--<h4 ng-if="data.vibe == 2">Dancing</h4>-->
-                            <!--</li>-->
-                            <!--<li class="bxd">-->
-                                <!--<h4>Music Type</h4>-->
-                                <!--<h4 ng-if="data.music_type == 0">Bollywood</h4>-->
-                                <!--<h4 ng-if="data.music_type == 1">EDM</h4>-->
-                                <!--<h4 ng-if="data.music_type == 2">Rock</h4>-->
-                                <!--<h4 ng-if="data.music_type == 3">Pop</h4>-->
-                                <!--<h4 ng-if="data.music_type == 4">Commercial</h4>-->
-                            <!--</li>-->
-                            <!--<li class="bxd">-->
-                                <!--<h4>Music Source</h4>-->
-                                <!--<h4 ng-if="data.music_source == 0">Speakers</h4>-->
-                                <!--<h4 ng-if="data.music_source == 1">In House DJ</h4>-->
-                                <!--<h4 ng-if="data.music_source == 2">Special DJ</h4>-->
-                                <!--<h4 ng-if="data.music_source == 3">Karaoke</h4>-->
-                                <!--<h4 ng-if="data.music_source == 4">Live Band</h4>-->
-                            <!--</li>-->
-                        <!--</ul>-->
-                        <!--<p>-->
-                            <!--<a href="javascript:void(0);" class="btn btn-primary bg-color btn-sm"-->
-                               <!--ng-click="ViewDetails(data)">View-->
-                                <!--Details</a>-->
-                        <!--</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--&lt;!&ndash;<img ng-src="{{data.venue.image}}" alt="...">&ndash;&gt;-->
-            <!--</div>-->
         </div>
 
 
@@ -167,6 +119,9 @@
 <!-- /container -->
 
 
+<!--=========================== Product Pop up details ======================-->
+
+
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -177,7 +132,7 @@
                 <h4 class="modal-title">{{modalHeader}}</h4>
             </div>
             <div class="modal-body">
-                <div><img ng-src="{{modalImg}}" class="img-responsive"></div>
+                <div><img ng-src="{{modalImg}}" style="width: 100%;"></div>
                 <div>
                     <ul class="list-inline text-center">
                         <li class="bx bx1"><h4>people</h4><h4>{{people}}</h4></li>
@@ -187,6 +142,7 @@
                     </ul>
                 </div>
                 <h4 class="text-center"><b>Description</b></h4>
+
                 <p class="text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
                     eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                     ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat

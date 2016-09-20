@@ -178,7 +178,7 @@ a:focus {
         margin-left: 10px
     }
     .navbar-header {
-        height: 100px
+        height: 65px
     }
     .sec2 h1 {
         font-family: pacificoregular!important
@@ -318,7 +318,12 @@ a:focus {
     overflow:hidden;
 }
 .full-thumb{
-    min-width:200px;min-height:200px;background-size: cover !important;box-shadow: 0 0 10px #000;
+    min-width:200px;min-height:200px;background-size: 100% 100% !important;box-shadow: 0 0 10px #000;
+}
+@media(max-width: 768px){
+    .full-thumb{
+        min-width:200px;min-height:200px;background-size: cover !important;box-shadow: 0 0 10px #000;
+    }
 }
 .bd-bottm{
     border-bottom: 4px solid purple;
